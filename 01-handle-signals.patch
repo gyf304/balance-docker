@@ -1,0 +1,11 @@
+--- balance.c   2023-08-16 21:43:54.675065331 +0000
++++ balance.c   2023-08-16 21:43:37.394598617 +0000
+@@ -1655,6 +1655,8 @@
+     }
+   }
+
++  signal(SIGTERM, exit);
++  signal(SIGINT, exit);
+
+   usr1_action.sa_handler = usr1_handler;
+   usr1_action.sa_flags = SA_RESTART;
